@@ -17,10 +17,10 @@ Object Detection Approaches Used
 * RetinaNet
 
 Running The Project
-* To view the YOLOv8 model, go to the 'models' folder and run the 'YOLOv8 Object Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
-* To view the YOLOV9 model, go to the 'models' folder and run the 'YOLOv9 Object Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
-* To view the DETR model, go to the 'models' folder and run the '' notebook.
-* To view the RetinaNet model, go to the 'models' folder and run the 'RetinaNet.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
+* To view the YOLOv8 model, go to the 'models' folder and run the 'YOLOv8_Object_Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
+* To view the YOLOV9 model, go to the 'models' folder and run the 'YOLOv9_Object_Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
+* To view the DETR model, go to the 'models' folder and run the 'DETR_Object_Detection.ipynb' notebook.
+* To view the RetinaNet model, go to the 'models' folder and run the 'RetinaNet_Object_Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Attribution:
 @misc{RarePlanes_Dataset,
