@@ -39,7 +39,7 @@ Attribution:
     year = {2020}
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-YOLOv8 Model Running Instructions:
+## YOLOv8 Model Running Instructions:
 
 Retrieving the Home Directory:
 * Import the os module in your Python script.
