@@ -10,11 +10,16 @@ About the Project
 * For the scope of the computer vision project, the RarePlanes dataset will be used to investigate the efficacy of different object detection approaches, specifically using only the real images of aircraft.
 
 Object Detection Approaches Used
-* -
+* YOLOv8
+* YOLOv9
+* DETR
+* RetinaNet
 
 Running The Project
-* !!!!!!!!!!!!!!!!!!!!!!!!!! TODO :) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+* To view the YOLOv8 model, go to the 'models' folder and run the '' notebook.
+* To view the YOLOV9 model, go to the 'models' folder and run the 'YOLOv9 Object Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
+* To view the DETR model, go to the 'models' folder and run the '' notebook.
+* To view the RetinaNet model, go to the 'models' folder and run the 'RetinaNet.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Attribution:
 @misc{RarePlanes_Dataset,
