@@ -17,9 +17,9 @@ Authors
 * RetinaNet
 
 Running The Project
-* To view the YOLOv8 model, go to the 'models' folder and run the 'YOLOv8 Object Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
+* To view the YOLOv8 model, go to the 'models' folder and run the 'YOLOv8 Object Detection.ipynb' notebook. Further instructions are listed below in this README file under 'YOLOv8 Model Running Instructions'
 * To view the YOLOV9 model, go to the 'models' folder and run the 'YOLOv9 Object Detection.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
-* To view the DETR model, go to the 'models' folder and run the 'DETR.ipynb' notebook.
+* To view the DETR model, go to the 'models' folder and run the 'DETR.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
 * To view the RetinaNet model, go to the 'models' folder and run the 'RetinaNet.ipynb' notebook. Follow the instructions in the notebook and run each cell in the order they are presented in. This applies to the training, validation, and testing parts of the notebook.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Attribution:
@@ -124,10 +124,6 @@ from IPython.display import Image, display
 for image_path in glob.glob(f'{HOME}/runs/detect/predict/*.jpg')[:3]:
       display(Image(filename=image_path, width=600))
       print("\n")
-
-
-
-
 
 	
 
