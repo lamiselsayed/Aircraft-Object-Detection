@@ -9,6 +9,7 @@ Authors
 * This project utilizes the RarePlanes dataset available on Cosmiq Works (https://www.cosmiqworks.org/RarePlanes/), which contains real and synthetic images of the overhead view of aircrafts from a satellite. The dataset aims to improve the application of different computer vision tasks for aircraft imagery.
 * For the scope of the computer vision project, the RarePlanes dataset will be used to investigate the efficacy of different object detection approaches, specifically using only the real images of aircraft.
 * Please note that the demonstration video is attached via this link: https://drive.google.com/file/d/1rE2GqCOe76nzwWLKzSh5VtKP_NskS5iJ/view?usp=sharing
+* For the ease of the presentation, here is the Google Slides link of the attached PowerPoint: https://docs.google.com/presentation/d/1ocLGCW79Gk2MnW0InmSoTaJaUsUAuBeU/edit?usp=sharing&ouid=106966540953029967241&rtpof=true&sd=true
 
 ## Object Detection Approaches Used
 * YOLOv8
