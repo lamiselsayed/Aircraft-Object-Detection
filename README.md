@@ -126,6 +126,25 @@ for image_path in glob.glob(f'{HOME}/runs/detect/predict/*.jpg')[:3]:
       display(Image(filename=image_path, width=600))
       print("\n")
 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## YOLOv9 Model Running Instructions:
+
+**Training the YOLOv9 Object Detection Model**
+
+	For training, go to the cell titled "a. Training the YOLOv9 Network". This section will guide you through the steps necessary to train the YOLOv9 model using your dataset.
+
+**Validating the YOLOv9 Object Detection Model**
+
+	For validation, navigate to the cell titled "## b. Validating the YOLOv9 Network". This section includes instructions for validating the performance of the trained YOLOv9 model on the validation dataset.
+
+**Testing the YOLOv9 Object Detection Model**
+
+	For testing, go to the cell titled "c. Testing the YOLOv9 Network". This section provides the steps to evaluate the model's performance on the test dataset.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## RetinaNet Model Running Instructions:
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## DETR Model Running Instructions:
 
 The following steps are based off of the notebook code available in the models folder named "DETR.ipynb". These steps can be followed to set up your environment, load your custom coco format dataset, train your model, test your model, and perform inference. 
