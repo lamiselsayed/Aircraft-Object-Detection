@@ -125,6 +125,78 @@ for image_path in glob.glob(f'{HOME}/runs/detect/predict/*.jpg')[:3]:
       display(Image(filename=image_path, width=600))
       print("\n")
 
+## DETR Model Running Instructions:
+# DETR Model Training and Testing Guide
+
+## Environment Setup
+1. Install the required Python libraries:
+   ```bash
+   pip install -i https://test.pypi.org/simple/ supervision==0.3.0
+   pip install -q transformers
+   ```
+2. Check the GPU and CUDA versions:
+   ```bash
+   !nvidia-smi
+   ```
+
+## Training with Custom Dataset
+1. Download and prepare the custom dataset:
+   ```bash
+   # Example with Roboflow dataset
+   from roboflow import Roboflow
+   rf = Roboflow(api_key="YOUR_API_KEY")
+   project = rf.workspace("YOUR_WORKSPACE").project("YOUR_PROJECT")
+   dataset = project.version("VERSION").download("coco")
+   ```
+2. Create COCO data loaders:
+   ```python
+   from torchvision.datasets import CocoDetection
+   from torch.utils.data import DataLoader
+   # Load dataset
+   dataset = CocoDetection(img_folder="path_to_images", ann_file="path_to_annotations")
+   data_loader = DataLoader(dataset, batch_size=4, shuffle=True)
+   ```
+
+## Model Training
+1. Set up and train the model:
+   ```python
+   import pytorch_lightning as pl
+   from transformers import DetrForObjectDetection
+   # Define model
+   class DETRModel(pl.LightningModule):
+       ...
+   # Train
+   trainer = pl.Trainer()
+   trainer.fit(model)
+   ```
+
+## Model Inference and Evaluation on Test Dataset
+1. Load the model and run inference on test data:
+   ```python
+   # Load the trained model
+   model = DetrForObjectDetection.from_pretrained("path_to_saved_model")
+   # Run inference
+   outputs = model(image)
+   ```
+2. Evaluate the model:
+   ```python
+   from coco_eval import CocoEvaluator
+   # Perform evaluation
+   evaluator = CocoEvaluator(...)
+   ```
+
+## Save and Load Model
+1. Save the trained model:
+   ```python
+   model.save_pretrained("save_directory")
+   ```
+2. Load the model for further inference or evaluation:
+   ```python
+   from transformers import DetrForObjectDetection
+   model = DetrForObjectDetection.from_pretrained("save_directory")
+   ```
+
+
 	
 
 
