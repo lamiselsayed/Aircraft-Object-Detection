@@ -134,29 +134,39 @@ The following steps are based off of the notebook code available in the models f
 1. Install the required Python libraries:
    ```bash
    pip install -i https://test.pypi.org/simple/ supervision==0.3.0
-   pip install -q transformers
+   !pip install -q transformers
+   !pip install -q pytorch-lightning
+   !pip install -q roboflow
+   !pip install -q timm
    ```
-2. Check the GPU and CUDA versions:
-   ```bash
-   !nvidia-smi
-   ```
-
+   
 ## Training with Custom Dataset
 1. Download and prepare the custom dataset:
    ```bash
    # Example with Roboflow dataset
    from roboflow import Roboflow
-   rf = Roboflow(api_key="YOUR_API_KEY")
-   project = rf.workspace("YOUR_WORKSPACE").project("YOUR_PROJECT")
-   dataset = project.version("VERSION").download("coco")
+   rf = Roboflow(api_key="mgyYYQWIMNNPZFKv4VfJ")
+   project = rf.workspace("computer-vision-6p7fp").project("aircraft-object-detection")
+   version = project.version(2)
+   dataset = version.download("coco") 
    ```
 2. Create COCO data loaders:
    ```python
-   from torchvision.datasets import CocoDetection
    from torch.utils.data import DataLoader
-   # Load dataset
-   dataset = CocoDetection(img_folder="path_to_images", ann_file="path_to_annotations")
-   data_loader = DataLoader(dataset, batch_size=4, shuffle=True)
+
+   def collate_fn(batch):
+  	 pixel_values = [item[0] for item in batch]
+   	encoding = image_processor.pad(pixel_values, return_tensors="pt")
+   	labels = [item[1] for item in batch]
+   	return {
+      	 'pixel_values': encoding['pixel_values'],
+      	 'pixel_mask': encoding['pixel_mask'],
+      	 'labels': labels
+  	 }
+
+   TRAIN_DATALOADER = DataLoader(dataset=TRAIN_DATASET, collate_fn=collate_fn, batch_size=16, shuffle=True)
+   VAL_DATALOADER = DataLoader(dataset=VAL_DATASET, collate_fn=collate_fn, batch_size=16)
+   TEST_DATALOADER = DataLoader(dataset=TEST_DATASET, collate_fn=collate_fn, batch_size=16)
    ```
 
 ## Model Training
