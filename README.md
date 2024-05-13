@@ -127,7 +127,8 @@ for image_path in glob.glob(f'{HOME}/runs/detect/predict/*.jpg')[:3]:
       print("\n")
 
 ## DETR Model Running Instructions:
-# DETR Model Training and Testing Guide
+
+The following steps are based off of the notebook code available in the models folder named "DETR.ipynb". These steps can be followed to set up your environment, load your custom coco format dataset, train your model, test your model, and perform inference. 
 
 ## Environment Setup
 1. Install the required Python libraries:
@@ -196,6 +197,7 @@ for image_path in glob.glob(f'{HOME}/runs/detect/predict/*.jpg')[:3]:
    from transformers import DetrForObjectDetection
    model = DetrForObjectDetection.from_pretrained("save_directory")
    ```
+
 
 
 	
