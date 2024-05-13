@@ -144,6 +144,20 @@ for image_path in glob.glob(f'{HOME}/runs/detect/predict/*.jpg')[:3]:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## RetinaNet Model Running Instructions:
 
+**Training the RetinaNet Model**
+
+	For training the network, go to the cell titled "Training the Network". This section is divided into two parts:
+
+		a. Training the Network (1 epoch): Follow these instructions for a quick initial training run.
+		b. Training the Network & Validation (10 Epochs): Use this part for a more comprehensive training and validation process over 10 epochs.
+
+**Testing the RetinaNet Model**
+
+	For testing the network, navigate to the following cells:
+
+		d. Testing (Sample Test Cases): This cell provides instructions for running sample test cases to evaluate the model's predictions.
+		e. Testing the Network: Use this section to test the network comprehensively on your dataset.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## DETR Model Running Instructions:
 
